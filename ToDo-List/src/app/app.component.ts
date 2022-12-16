@@ -9,7 +9,7 @@ import { Todo } from './ToDo';
 export class AppComponent {
   todos : Todo[] = [];
   newTodo : string;
-
+// this is the function to add new todo
   saveTodo(){
     if(this.newTodo){
       	let todo = new Todo();
