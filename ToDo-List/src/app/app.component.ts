@@ -1,15 +1,26 @@
-import { Component } from '@angular/core';
 import { Todo } from './ToDo';
+import { Component, HostBinding } from '@angular/core';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+  // ...
+} from '@angular/animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [
+    // animation triggers go here
+  ]
 })
 export class AppComponent {
   todos : Todo[] = [];
   newTodo : string;
-// this is the function to add new todo
+
   saveTodo(){
     if(this.newTodo){
       	let todo = new Todo();
@@ -30,3 +41,5 @@ export class AppComponent {
     this.todos = this.todos.filter((v,i)=> i !== id);
   }
 }
+
+

@@ -1,4 +1,4 @@
-<h1 style="text-align: center;">ToDo-List</h1>
+<h1 style="text-align: center;">TO DO LIST</h1>
 <br>
 <div class="container">
   <div class="row justify-content-md-center">
@@ -9,10 +9,11 @@
       </div>
       <table class="table table-striped">
         <tbody>
+          <app-open-close></app-open-close>
           <tr *ngFor="let todo of todos;let i = index">
             <th scope="row">{{i + 1}}</th>
             <td class="{{(!todo.isCompleted)?'done':''}}" (click)="done(i)">{{todo.name}}</td>
-            <td style="color: red;font-weight: bold;" (click)="remove(i)">x</td>
+            <td style="color: blue;font-weight: bold;" (click)="remove(i)">x</td>
           </tr>
       </table>
     </div>
